@@ -31,6 +31,8 @@ jobs:
       - name: Run myflow
         run: python3 ./xiaogpt.py --hardware LX06  --mute_xiaoai --use_qwen --qwen_key ${{ env.QWEN_KEY }}
         env:
+          MI_USER: ${{ secrets.MI_USER }}
+          MI_PASS: ${{ secrets.MI_PASS }}
           MI_DID: ${{ secrets.MI_DID }}
           QWEN_KEY: ${{ secrets.QWEN_KEY }}
-          # PUSH_KEY: ${{ secrets.PUSH_KEY }}
+          DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
