@@ -51,8 +51,8 @@ MI_ASK_SIMULATE_DATA = {
 @dataclass
 class Config:
     hardware: str = "LX06"
-    account: str = "18996109903"    # os.getenv("MI_USER", "")
-    password: str = "banban11"  # os.getenv("MI_PASS", "")
+    account: str = os.getenv("MI_USER", "")
+    password: str = os.getenv("MI_PASS", "")
     openai_key: str = os.getenv("OPENAI_API_KEY", "")
     moonshot_api_key: str = os.getenv("MOONSHOT_API_KEY", "")
     yi_api_key: str = os.getenv("YI_API_KEY", "")
@@ -67,7 +67,7 @@ class Config:
     volc_access_key: str = os.getenv("VOLC_ACCESS_KEY", "")
     volc_secret_key: str = os.getenv("VOLC_SECRET_KEY", "")
     proxy: str | None = None
-    mi_did: str = "570159263"    # os.getenv("MI_DID", "")
+    mi_did: str = os.getenv("MI_DID", "")
     keyword: Iterable[str] = KEY_WORD
     change_prompt_keyword: Iterable[str] = CHANGE_PROMPT_KEY_WORD
     prompt: str = PROMPT
